@@ -1,5 +1,4 @@
 import React from "react";
-//import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -20,10 +19,10 @@ const MovieInfo = ({ movie }) => {
       <p>
         <small>Rating: {movie.vote_average}</small>
       </p>
-      <Link to="/MovieDetailsPage">
+      <Link to={`/movies/${movie.id}`}>
         <button className="btn btn-success">Overview</button>
         {/*       <p className="card--desc">{movie.overview}</p>
-         */}{" "}
+         */}
       </Link>
     </motion.div>
   );
